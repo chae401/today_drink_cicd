@@ -56,6 +56,9 @@ configurations {
 clean {
 	delete file('src/main/generated')
 }
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
 tasks.named('test') {
 	useJUnitPlatform()
 }
